@@ -6,6 +6,7 @@
 package com.stuypulse.robot;
 
 import com.stuypulse.robot.commands.auton.DoNothingAuton;
+import com.stuypulse.robot.commands.auton.MobilityAuton;
 import com.stuypulse.robot.constants.Ports;
 import com.stuypulse.stuylib.input.Gamepad;
 import com.stuypulse.stuylib.input.gamepads.AutoGamepad;
@@ -50,9 +51,9 @@ public class RobotContainer {
     /**************/
 
     public void configureAutons() {
-        autonChooser.setDefaultOption("Do Nothing", new DoNothingAuton());
-
-        SmartDashboard.putData("Autonomous", autonChooser);
+        // autonChooser.setDefaultOption("Do Nothing", new DoNothingAuton());
+        autonChooser.setDefaultOption("Mobility", new MobilityAuton());
+        // SmartDashboard.putData("Autonomous", autonChooser);
     }
 
     public Command getAutonomousCommand() {
